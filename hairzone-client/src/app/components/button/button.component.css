@@ -1,8 +1,8 @@
 .btn {
     position: relative;
-    padding: 1rem;
+    padding: 20px;
     border: 5px solid #000;
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
     background-color: #A9E6E1;
 }

@@ -1,12 +1,16 @@
 <div>
     <div class="grid-container mt-2">
         <div class="grid-item main-image"></div>
+        <div class="grid-item main-menu">
+            <app-menu></app-menu>
+        </div>
         <div class="grid-item main-title">
-        <h1 class="title">Hairzone</h1>
-        <h2 class="subtitle">Lorem Ipsum Slogan</h2>
-        <app-button class="btn" text="Znajdź salon dla siebie" (onClick)='scroll(panel)'></app-button>
+            <h1 class="title">Hairzone</h1>
+            <h2 class="subtitle">Lorem Ipsum Slogan</h2>
+            <app-button class="btn" text="Znajdź salon dla siebie" (onClick)='scroll(panel)'></app-button>
         </div>
     </div>
     <div style="height: 2000px" #panel>
     </div>
 </div>
+<app-footer></app-footer>

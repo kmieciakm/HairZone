@@ -1,0 +1,16 @@
+.menu {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    list-style-type: none;
+    text-align: right;
+}
+
+.menu-item {
+    text-decoration: underline;
+    padding-bottom: 0.5rem;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    font-weight: bold;
+}

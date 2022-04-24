@@ -27,7 +27,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     filter: grayscale(100%);
-  }
+}
+
+.main-menu {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
 
 .main-title {
     z-index: 5;
@@ -67,7 +74,12 @@
 
 @media only screen and (max-width: 900px) {
     .main-image {
-        grid-column-end: 6;
+        grid-column-end: 5;
+        grid-row-start: 2;
+    }
+    .main-menu {
+        grid-column-start: 1;
+        grid-row-start: 1;
     }
     .main-title {
         grid-column-start: 1;

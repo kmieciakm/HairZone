@@ -9,15 +9,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 import { ButtonComponent } from './components/button/button.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ErrorComponent,
-    ButtonComponent
+    PrivacyComponent,
+    FooterComponent,
+    ButtonComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

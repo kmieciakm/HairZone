@@ -1,4 +1,13 @@
 body {
     background-color: #A9E6E1 !important;
     margin: 0;
+    font-size: 20px;
+}
+
+.full-page-center {
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
