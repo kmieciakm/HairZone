@@ -10,11 +10,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorComponent } from './pages/error/error.component';
 
+import { ButtonComponent } from './components/button/button.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
