@@ -16,11 +16,15 @@ export class IdentityService {
     return this.http
       .post<Token>(`${environment.identityUrl}/identity/login`, signIn)
       .pipe(map(token => {
-        localStorage.setItem('user_token', JSON.stringify(token.jwt));
+        localStorage.setItem('user_token', token.jwt);
         const userPayload = jwtDecode<UserPayload>(token.jwt);
         const user = UserPayload.getUser(userPayload);
         localStorage.setItem('user', JSON.stringify(user));
       }));
+  }
+
+  getAccessToken(): string | null {
+    return localStorage.getItem("user_token");
   }
 
   getLoggedInUser(): User | null {
