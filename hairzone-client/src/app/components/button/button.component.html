@@ -1,1 +1,1 @@
-<div class="btn" (click)="onClick.emit($event)" #button>{{text}}</div>
+<button class="btn" (click)="onClick.emit($event)" [type]="submit?'submit':''" #button>{{text}}</button>

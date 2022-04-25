@@ -5,9 +5,27 @@ body {
 }
 
 .full-page-center {
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.error-text {
+    font-size: 1rem;
+    color: red;
+    margin-top: 0;
 }

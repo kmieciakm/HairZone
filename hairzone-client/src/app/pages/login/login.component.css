@@ -1,0 +1,32 @@
+.login {
+    max-width: 400px;
+}
+
+.login-logo {
+    height: 150px;
+    background-image: url("../../../assets/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-body {
+    background-color: #fefefe;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+.login-link {
+    cursor: pointer;
+}
+
+.login-join {
+    text-align: center;
+}
+
+.login-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

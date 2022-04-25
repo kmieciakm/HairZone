@@ -1,0 +1,18 @@
+<div class="full-page-center">
+    <div class="login">
+        <div class="login-logo"></div>
+        <div class="login-body">
+            <div class="login-join">
+                <span>Twój salon jeszcze nie jest dostępny na Hairzone?</span>
+                <br>
+                <span class="underline bold login-link" routerLink="join">Dołącz już dzisiaj.</span>
+            </div>
+            <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <app-input label="email" formInputName="email" [parentGroup]="loginForm"></app-input>
+                <app-input label="password" formInputName="password" type="password" [parentGroup]="loginForm"></app-input>
+                <p class="error-text" *ngIf="formErrorMessage">{{formErrorMessage}}</p>
+                <app-button text="Login" width="200px" padding="0.8rem" bgColor="transparent" [submit]=true></app-button>
+            </form>
+        </div>
+    </div>
+</div>
