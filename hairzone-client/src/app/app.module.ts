@@ -19,6 +19,8 @@ import { InputComponent } from './components/input/input.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AuthorizeInterceptor } from './helpers/auth.interceptor';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { AuthorizeInterceptor } from './helpers/auth.interceptor';
     ManagementComponent,
     LoginComponent,
     FooterComponent,
+    ResetPasswordComponent,
+    ForgotPasswordComponent,
     ButtonComponent,
     InputComponent,
     MenuComponent,

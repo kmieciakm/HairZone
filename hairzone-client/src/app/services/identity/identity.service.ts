@@ -35,6 +35,16 @@ export class IdentityService {
     return null;
   }
 
+  forgotPassword(email: string): Observable<void> {
+    return this.http
+      .post<void>(`${environment.identityUrl}/identity/forgotpassword`, new ForgotPasswordRequest(email));
+  }
+
+  resetPassword(resetPassword: ResetPasswordRequest): Observable<void> {
+    return this.http
+      .post<void>(`${environment.identityUrl}/identity/resetpassword`, resetPassword);
+  }
+
   logout(): void {
     localStorage.removeItem("user_token");
     localStorage.removeItem("user");
@@ -51,6 +61,14 @@ export class User {
 
 class Token {
   constructor(public jwt: string) { }
+}
+
+class ForgotPasswordRequest {
+  constructor(public email: string) { }
+}
+
+export class ResetPasswordRequest {
+  constructor(public email: string, public newpassword: string, public token: string) { }
 }
 
 class UserPayload implements JwtPayload {

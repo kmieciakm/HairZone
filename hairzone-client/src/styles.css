@@ -25,8 +25,55 @@ body {
     font-weight: bold;
 }
 
+.mb {
+    margin-bottom: 1rem;
+}
+
 .error-text {
     font-size: 1rem;
     color: red;
     margin-top: 0;
+}
+
+.success-text {
+    font-size: 1rem;
+    color: green;
+    margin-top: 0;
+}
+
+.identity {
+    width: 400px;
+}
+
+.text-small {
+    font-size: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.identity-logo {
+    height: 150px;
+    background-image: url("assets/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.identity-body {
+    background-color: #fefefe;
+    padding: 2rem;
+    font-size: 1.4rem;
+}
+
+.identity-link {
+    cursor: pointer;
+}
+
+.identity-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }

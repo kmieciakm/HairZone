@@ -1,16 +1,18 @@
 <div class="full-page-center">
-    <div class="login">
-        <div class="login-logo"></div>
-        <div class="login-body">
+    <div class="identity">
+        <div class="identity-logo"></div>
+        <div class="identity-body">
             <div class="login-join">
                 <span>Twój salon jeszcze nie jest dostępny na Hairzone?</span>
                 <br>
-                <span class="underline bold login-link" routerLink="join">Dołącz już dzisiaj.</span>
+                <span class="underline bold identity-link" routerLink="join">Dołącz już dzisiaj.</span>
             </div>
-            <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form class="identity-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <p class="success-text" *ngIf="message">{{message}}</p>
                 <app-input label="email" formInputName="email" [parentGroup]="loginForm"></app-input>
                 <app-input label="password" formInputName="password" type="password" [parentGroup]="loginForm"></app-input>
                 <p class="error-text" *ngIf="formErrorMessage">{{formErrorMessage}}</p>
+                <span class="underline bold identity-link text-small mb" routerLink="/forgot-password">Nie pamiętasz hasła.</span>
                 <app-button text="Login" width="200px" padding="0.8rem" bgColor="transparent" [submit]=true></app-button>
             </form>
         </div>
