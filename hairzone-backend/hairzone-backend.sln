@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hairzone-backend", "hairzone-backend\hairzone-backend.csproj", "{7A232579-15C7-4CC0-80D2-823679665567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hairzone.API", "Hairzone.API\Hairzone.API.csproj", "{58B1160F-6DC7-4C1C-A2AD-8F2A560C847D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hairzone.API", "Hairzone.API\Hairzone.API.csproj", "{58B1160F-6DC7-4C1C-A2AD-8F2A560C847D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hairzone.CORE", "Hairzone.CORE\Hairzone.CORE.csproj", "{EE707BB8-830B-4EDA-84D9-9FEB57E79FCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7A232579-15C7-4CC0-80D2-823679665567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A232579-15C7-4CC0-80D2-823679665567}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A232579-15C7-4CC0-80D2-823679665567}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A232579-15C7-4CC0-80D2-823679665567}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58B1160F-6DC7-4C1C-A2AD-8F2A560C847D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58B1160F-6DC7-4C1C-A2AD-8F2A560C847D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58B1160F-6DC7-4C1C-A2AD-8F2A560C847D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58B1160F-6DC7-4C1C-A2AD-8F2A560C847D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE707BB8-830B-4EDA-84D9-9FEB57E79FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE707BB8-830B-4EDA-84D9-9FEB57E79FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE707BB8-830B-4EDA-84D9-9FEB57E79FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE707BB8-830B-4EDA-84D9-9FEB57E79FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
