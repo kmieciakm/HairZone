@@ -4,5 +4,6 @@
 
 export const environment = {
   production: false,
-  identityUrl: 'https://functionapptest20220328153554.azurewebsites.net/api'
+  identityUrl: 'https://functionapptest20220328153554.azurewebsites.net/api',
+  apiUrl: 'http://localhost:7071/api'
 };

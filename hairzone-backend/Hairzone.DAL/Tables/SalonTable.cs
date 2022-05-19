@@ -15,9 +15,9 @@ public class SalonEntity : Entity
 
     public SalonEntity() { }
 
-    public SalonEntity(string name, string phone, string email, TimeOnly? openingTime, TimeOnly? closingTime, Guid addressId)
+    public SalonEntity(Guid guid, string name, string phone, string email, TimeOnly? openingTime, TimeOnly? closingTime, Guid addressId)
     {
-        Id = Guid.NewGuid();
+        Id = guid;
         Name = name;
         Phone = phone;
         Email = email;
@@ -27,12 +27,21 @@ public class SalonEntity : Entity
     }
 
     public static SalonEntity Create(Salon salon, Guid addressId) => new(
+        salon.Guid,
         salon.Name,
         salon.Phone,
         salon.Email,
         salon.OpeningTime,
         salon.ClosingTime,
         addressId
+    );
+
+    internal static Salon ToDomain(SalonEntity salonEntity, AddressEntity addressEntity) => new(
+        salonEntity.Id,
+        salonEntity.Name,
+        salonEntity.Phone,
+        salonEntity.Email,
+        AddressEntity.ToDomain(addressEntity)
     );
 }
 

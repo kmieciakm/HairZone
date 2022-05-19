@@ -1,17 +1,18 @@
-import { Component, OnInit, Input, Output, ViewChild, ElementRef, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild, ElementRef, EventEmitter, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.css']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent implements OnInit, AfterViewInit {
 
   @Input() text: string = '';
   @Input() width: string = 'auto';
   @Input() padding: string | undefined = undefined;
   @Input() bgColor: string | undefined = undefined;
   @Input() submit: boolean = false;
+  @Input() active: boolean = false;
   
   @Output() onClick: EventEmitter<MouseEvent> = new EventEmitter();
 

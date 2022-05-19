@@ -7,10 +7,24 @@
         <div class="grid-item main-title">
             <h1 class="title">Hairzone</h1>
             <h2 class="subtitle">Lorem Ipsum Slogan</h2>
-            <app-button class="btn" text="Znajdź salon dla siebie" (onClick)='scroll(panel)'></app-button>
+            <app-button id="grid-scroll-btn" class="btn" text="Znajdź salon dla siebie" (onClick)='scroll(panel)'></app-button>
         </div>
     </div>
-    <div style="height: 2000px" #panel>
+    <app-spacer height="2rem"></app-spacer>
+    <div class="salons-container" #panel>
+        <h3 class="">Proszę wybrać misto wizyty</h3>
+        <div class="salons-row">
+            <div *ngFor="let city of cities$ | async">
+                <app-button class="btn" width="200px" text={{city}} [active]="currentCity == city" (onClick)='showSalons(city)'></app-button>
+            </div>
+        </div>
+        <app-spacer height="2rem"></app-spacer>
+        <h3 class="">Dostępne salony</h3>
+        <div class="salons-row">
+            <div *ngFor="let salon of salons$ | async">
+                <app-salon-card [salon]="salon"></app-salon-card>
+            </div>
+        </div>
     </div>
 </div>
 <app-footer></app-footer>

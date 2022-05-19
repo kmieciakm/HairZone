@@ -41,6 +41,16 @@ body {
     margin-top: 0;
 }
 
+.link {
+    text-decoration: underline;
+    padding-bottom: 0.5rem;
+}
+
+.link:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .identity {
     width: 400px;
 }

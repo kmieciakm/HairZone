@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './helpers/auth.guard';
+import { BookComponent } from './pages/book/book.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -12,6 +13,7 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
+  { path: "book/:id", component: BookComponent },
   { path: "privacy", component: PrivacyComponent },
   { path: "login", component: LoginComponent },
   { path: "reset-password", component: ResetPasswordComponent },

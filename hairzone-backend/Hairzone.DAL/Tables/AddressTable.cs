@@ -28,6 +28,13 @@ public class AddressEntity : Entity
         address.Number,
         address.PostalCode
     );
+
+    internal static Address ToDomain(AddressEntity addressEntity) => new(
+        addressEntity.City,
+        addressEntity.Street,
+        addressEntity.Number,
+        addressEntity.PostalCode
+    );
 }
 
 public interface IAddressTable : ITable<AddressEntity, Guid>

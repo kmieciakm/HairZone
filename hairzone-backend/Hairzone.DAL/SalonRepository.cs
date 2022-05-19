@@ -35,4 +35,35 @@ public class SalonRepository : ISalonRepository
             throw;
         }
     }
+
+    public async Task<IEnumerable<Salon>> GetAllByCity(string city)
+    {
+        var addresses = await _addressTable
+            .QueryAsync(add => add.City == city);
+
+        List<SalonEntity> salons = new();
+        foreach(var address in addresses)
+        {
+            var salon = (await _salonTable
+                .QueryAsync(salon => salon.AddressId == address.Id))
+                .FirstOrDefault();
+            if (salon is not null)
+            {
+                salons.Add(salon);
+            }
+        }
+
+        return salons.Select(
+            salon => SalonEntity.ToDomain(salon, addresses.First(add => add.Id.Equals(salon.AddressId))));
+    }
+
+    public async Task<IEnumerable<string>> GetCities()
+    {
+        var addresses = await _addressTable
+            .QueryAsync(add => add.City != string.Empty);
+
+        return addresses
+            .Select(add => add.City)
+            .Distinct();
+    }
 }

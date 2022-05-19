@@ -1,0 +1,13 @@
+<div *ngIf="salon">
+    <div class="salon-box">
+        <div class="salon-name">{{salon.name}}</div>
+        <app-spacer></app-spacer>
+        <div class="salon-address">
+            <span>{{salon.address.street}} {{salon.address.number}}, {{salon.address.city}}</span>
+        </div>
+        <app-spacer height="1.5rem"></app-spacer>
+        <div>
+            <span class="link" [routerLink]="['/book', salon.guid]">Zarezerwuj wizytę</span>
+        </div>
+    </div>
+</div>

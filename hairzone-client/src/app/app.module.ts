@@ -21,6 +21,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AuthorizeInterceptor } from './helpers/auth.interceptor';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { SalonCardComponent } from './components/salon-card/salon-card.component';
+import { SpacerComponent } from './components/spacer/spacer.component';
+import { FakeSalonService, ISalonService } from './services/salon/salon.service';
+import { BookComponent } from './pages/book/book.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +34,15 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     PrivacyComponent,
     ManagementComponent,
     LoginComponent,
+    BookComponent,
     FooterComponent,
     ResetPasswordComponent,
     ForgotPasswordComponent,
     ButtonComponent,
     InputComponent,
     MenuComponent,
+    SalonCardComponent,
+    SpacerComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     PrimengModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
+    { provide: ISalonService, useClass: FakeSalonService }
   ],
   bootstrap: [AppComponent]
 })

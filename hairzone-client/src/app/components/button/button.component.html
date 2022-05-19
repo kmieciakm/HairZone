@@ -1,1 +1,6 @@
-<button class="btn" (click)="onClick.emit($event)" [type]="submit?'submit':''" #button>{{text}}</button>
+<button #button
+        (click)="onClick.emit($event)"
+        [type]="submit ? 'submit' : ''"
+        [className]="active ? 'btn active' : 'btn'">
+    {{text}}
+</button>

@@ -26,4 +26,14 @@ public class SalonAdminstrationService : ISalonAdministrationService
         ));
         await _SalonRepository.CreateSalonAsync(account.Guid, salon);
     }
+
+    public async Task<IEnumerable<Salon>> GetAvailableSalonsInCity(string city)
+    {
+        return await _SalonRepository.GetAllByCity(city);
+    }
+
+    public async Task<IEnumerable<string>> GetCities()
+    {
+        return await _SalonRepository.GetCities();
+    }
 }

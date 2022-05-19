@@ -1,0 +1,16 @@
+.salon-box {
+    width: 300px;
+    height: 200px;
+    margin: 1rem;
+    padding: 2rem;
+    border: solid black 5px;
+    text-align: center;
+}
+
+.salon-name {
+    font-size: 1.6rem;
+}
+
+.salon-address {
+
+}
