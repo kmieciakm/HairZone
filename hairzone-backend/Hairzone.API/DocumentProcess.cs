@@ -14,10 +14,14 @@ namespace Hairzone.API;
 public class DocumentProcess
 {
     private IContractorParser _ContractorParser { get; }
+    private ISalonAdministrationService _SalonAdministrationService { get; }
 
-    public DocumentProcess(IContractorParser contractorParser)
+    public DocumentProcess(
+        IContractorParser contractorParser,
+        ISalonAdministrationService salonAdministrationService)
     {
         _ContractorParser = contractorParser;
+        _SalonAdministrationService = salonAdministrationService;
     }
 
     [FunctionName("ContractorProcess")]
@@ -33,6 +37,8 @@ public class DocumentProcess
 
             XDocument document = XDocument.Load(inputDocument);
             Contractor contractor = _ContractorParser.ParseXML(document);
+            Salon salon = new Salon(contractor);
+            await _SalonAdministrationService.RegisterSalonAsync(salon);
         }
         catch (Exception ex)
         {
